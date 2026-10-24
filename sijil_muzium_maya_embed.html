@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sijil Penghargaan Muzium Maya</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+:root{--bg:#eee6d2;--panel:#fbf6e8;--ink:#1f3a2a;--gold:#8a6a2f;--line:#c9b27a;--btn:#1f4d34;--btnink:#f6ecd0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1d15;--panel:#17291e;--ink:#e9dfc2;--gold:#c9a557;--line:#4b4a2c;--btn:#c9a557;--btnink:#15261b}}
+:root[data-theme="dark"]{--bg:#0f1d15;--panel:#17291e;--ink:#e9dfc2;--gold:#c9a557;--line:#4b4a2c;--btn:#c9a557;--btnink:#15261b}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Playfair Display",Georgia,serif;line-height:1.6}
+main{max-width:1040px;margin:0 auto;padding:28px 16px 56px}
+h1{font-family:Cinzel,Georgia,serif;font-size:clamp(1.4rem,4vw,2rem);margin:0 0 4px;letter-spacing:.04em}
+.sub{margin:0 0 22px;color:var(--gold)}
+form{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:20px;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));align-items:end}
+label{display:grid;gap:6px;font-size:.95rem}
+input{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:4px;background:transparent;color:var(--ink)}
+input:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+button{font:600 1rem Cinzel,Georgia,serif;letter-spacing:.05em;padding:12px 18px;border:0;border-radius:4px;background:var(--btn);color:var(--btnink);cursor:pointer}
+button.alt{background:transparent;color:var(--ink);border:1px solid var(--gold)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;grid-column:1/-1}
+#msg{min-height:1.4em;margin:12px 0;color:var(--gold)}
+#stage{overflow:hidden;width:100%}
+#empty{border:1px dashed var(--line);border-radius:6px;padding:48px 16px;text-align:center;color:var(--gold)}
+#wrap{display:none;overflow:hidden}
+#cert{width:1000px;height:707px;transform-origin:top left;position:relative;color:#2b2b24;text-align:center;font-family:Merriweather,Georgia,serif;
+background:radial-gradient(ellipse at 50% 45%,#faf5e6 0%,#f1e6c8 60%,#e2d1a4 100%);}
+#cert .o1{position:absolute;inset:12px;border:7px solid #17382a}
+#cert .o2{position:absolute;inset:32px;border:1px solid #17382a}
+.br{position:absolute;width:62px;height:62px;border:3px solid #17382a}
+.br::after{content:"";position:absolute;inset:9px;border:1.5px solid #17382a}
+.b1{left:48px;top:48px;border-right:0;border-bottom:0}.b1::after{border-right:0;border-bottom:0}
+.b2{right:48px;top:48px;border-left:0;border-bottom:0}.b2::after{border-left:0;border-bottom:0}
+.b3{left:48px;bottom:48px;border-right:0;border-top:0}.b3::after{border-right:0;border-top:0}
+.b4{right:48px;bottom:48px;border-left:0;border-top:0}.b4::after{border-left:0;border-top:0}
+.in{position:absolute;inset:48px 90px 74px;display:flex;flex-direction:column;align-items:center}
+.ico{display:flex;align-items:center;gap:14px;width:340px}
+.ico i{flex:1;height:1px;background:#a9925a}
+.org{font-family:Cinzel,serif;font-weight:700;font-size:15px;letter-spacing:.3em;color:#17382a;margin-top:8px}
+.dept{font-family:"Playfair Display",serif;font-style:italic;font-size:11.5px;color:#6b5a30;margin-top:3px}
+.ttl{font-family:Cinzel,serif;font-weight:700;font-size:52px;letter-spacing:.05em;color:#17382a;margin:12px 0 0;line-height:1.1}
+.eng{font-family:"Playfair Display",serif;font-style:italic;font-size:12.5px;letter-spacing:.22em;color:#a5472d;margin-top:4px}
+.lead{font-size:16px;font-style:italic;color:#555;margin:16px 0 8px}
+.nmb{width:100%;border-top:1px solid #cdbd91;border-bottom:1px solid #cdbd91;padding:8px 0}
+.nm{font-family:Cinzel,serif;font-weight:700;font-size:38px;color:#17382a;text-transform:uppercase;line-height:1.2;overflow-wrap:anywhere}
+.ic{font-size:13.5px;margin:10px 0 10px}.ic b{color:#17382a}
+.kr{font-size:17px;line-height:1.5;margin:0;max-width:700px}
+.box{margin-top:10px;background:#f0e3bf;border:1px solid #d8c68f;border-radius:6px;padding:12px 24px;font-family:Cinzel,serif;font-weight:700;font-size:17px;letter-spacing:.06em;color:#17382a;line-height:1.5;width:100%}
+.ps{font-family:"Playfair Display",serif;font-style:italic;font-size:12.5px;color:#6b6350;margin:10px 0 0;max-width:720px}
+.foot{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:flex-end;text-align:left}
+.dt{width:250px}.dt .l{font-size:10px;letter-spacing:.1em;color:#9a8f6e}.dt .d{font-size:13px;font-weight:700;color:#17382a;margin:4px 0 0;padding-bottom:5px;border-bottom:1px solid #b9ab80;width:130px}.dt .r{font-family:"Playfair Display",serif;font-style:italic;font-size:10px;color:#8a7f60;margin-top:4px}
+.medal{width:100px;height:100px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f0d37a,#b8892a 65%,#8d6618);border:3px solid #d9b85a;box-shadow:0 0 0 3px #a37a22;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff6d6;font-family:Cinzel,serif;font-weight:700;margin:0 0 6px}
+.medal b{font-size:15px;letter-spacing:.06em}.medal small{font-size:8px;letter-spacing:.16em;margin-top:2px}
+.sig{width:250px;text-align:right}.sig .n{font-family:"Great Vibes",cursive;font-size:44px;color:#17382a;line-height:1}
+.sig .u{border-top:1px solid #b9ab80;margin-top:4px;padding-top:5px;font-family:Cinzel,serif;font-weight:700;font-size:12px;letter-spacing:.08em;color:#17382a}
+.sig .r{font-size:9.5px;letter-spacing:.08em;color:#8a7f60;margin-top:2px}
+.vid{position:absolute;left:0;right:0;bottom:-34px;font-family:"Courier New",monospace;font-size:11px;letter-spacing:.1em;color:#a89f82;text-align:center}
+canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+</style>
+</head>
+<body>
+<main>
+<h1>Sijil Penghargaan Muzium Maya</h1>
+<p class="sub">Isi butiran anda untuk menerima sijil rasmi.</p>
+<form id="f">
+<label>Nama Pelajar<input id="name" required maxlength="60" autocomplete="name" placeholder="cth. Aisyah binti Rahman"></label>
+<label>Nombor Kad Pengenalan (I/C)<input id="ic" required maxlength="14" inputmode="numeric" placeholder="cth. 080512-10-1234"></label>
+<label>Tarikh<input id="date" type="date" required></label>
+<div class="actions">
+<button type="submit">Jana &amp; Terima Sijil</button>
+<button type="button" class="alt" id="dl" hidden>Muat Turun PNG</button>
+</div>
+</form>
+<div id="msg" role="status"></div>
+<div id="stage">
+<div id="empty">Sijil anda akan dipaparkan di sini.</div>
+<div id="wrap">
+<div id="cert">
+<div class="o1"></div><div class="o2"></div>
+<div class="br b1"></div><div class="br b2"></div><div class="br b3"></div><div class="br b4"></div>
+<div class="in">
+<div class="ico"><i></i><svg width="34" height="28" viewBox="0 0 34 28"><path d="M3 22L1 7l9 8 7-12 7 12 9-8-2 15z" fill="#b08a3a"/><rect x="3" y="23" width="28" height="4" fill="#b08a3a"/></svg><svg width="38" height="32" viewBox="0 0 38 32"><path d="M19 1L2 10h34z" fill="#17382a"/><rect x="5" y="12" width="4" height="14" fill="#17382a"/><rect x="12" y="12" width="4" height="14" fill="#17382a"/><rect x="22" y="12" width="4" height="14" fill="#17382a"/><rect x="29" y="12" width="4" height="14" fill="#17382a"/><rect x="2" y="28" width="34" height="4" fill="#17382a"/></svg><svg width="28" height="30" viewBox="0 0 28 30"><path d="M4 2h18a3 3 0 013 3v20H8a3 3 0 00-3 3H4z" fill="#b08a3a"/><rect x="9" y="7" width="10" height="2.5" fill="#f1e6c8"/></svg><i></i></div>
+<div class="org">MUZIUM MAYA SEJARAH MALAYSIA</div>
+<div class="dept">Jabatan Penyelidikan Sejarah Pendidikan Zaman Kolonial British</div>
+<div class="ttl">SIJIL PENGHARGAAN</div>
+<div class="eng">CERTIFICATE OF APPRECIATION</div>
+<p class="lead">Dengan ini memperakui dan setinggi-tinggi tahniah diucapkan kepada:</p>
+<div class="nmb"><div class="nm" id="cName"></div></div>
+<div class="ic">No. Kad Pengenalan: <b id="cIc"></b></div>
+<p class="kr">Kerana telah berjaya menyelesaikan dengan cemerlang keseluruhan modul &amp; kuiz dalam:</p>
+<div class="box">“CABARAN SEJARAH MUZIUM MAYA: SEJARAH PENDIDIKAN ZAMAN BRITISH”</div>
+<p class="ps">Menunjukkan keperihatinan, pemahaman mendalam, serta iltizam tinggi terhadap khazanah warisan sejarah tanah air.</p>
+<div class="foot">
+<div class="dt"><div class="l">TARIKH DIKELUARKAN:</div><div class="d" id="cDate"></div><div class="r">Pengesahan Muzium Maya</div></div>
+<div class="medal"><b>LULUS</b><small>RASMI</small></div>
+<div class="sig"><div class="n">NurShahira</div><div class="u">NURSHAHIRA</div><div class="r">KURATOR MUZIUM MAYA</div></div>
+<div class="vid" id="cId"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<canvas id="fx"></canvas>
+<script>
+var $=function(i){return document.getElementById(i)};
+var months=["Januari","Februari","Mac","April","Mei","Jun","Julai","Ogos","September","Oktober","November","Disember"];
+var today=new Date();
+$("date").value=today.getFullYear()+"-"+String(today.getMonth()+1).padStart(2,"0")+"-"+String(today.getDate()).padStart(2,"0");
+function fmt(v){var p=v.split("-");return parseInt(p[2],10)+" "+months[parseInt(p[1],10)-1]+" "+p[0]}
+function fit(){var w=$("stage").clientWidth,s=Math.min(1,w/1000);$("cert").style.transform="scale("+s+")";$("wrap").style.height=(707*s)+"px"}
+window.addEventListener("resize",fit);
+
+/* Audio: arpeggio + cheering, all synthesised */
+function playCelebration(){
+ var AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
+ var ctx=new AC(),t0=ctx.currentTime+0.05,out=ctx.createGain();out.gain.value=0.5;out.connect(ctx.destination);
+ var notes=[261.63,329.63,392,523.25,659.25,783.99,1046.5];
+ notes.forEach(function(f,i){
+  var o=ctx.createOscillator(),g=ctx.createGain(),t=t0+i*0.11;
+  o.type="triangle";o.frequency.value=f;
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(0.35,t+0.02);g.gain.exponentialRampToValueAtTime(0.001,t+0.7);
+  o.connect(g);g.connect(out);o.start(t);o.stop(t+0.75);
+ });
+ var cs=t0+0.5,dur=2.6,len=Math.floor(ctx.sampleRate*dur),buf=ctx.createBuffer(1,len,ctx.sampleRate),d=buf.getChannelData(0);
+ for(var i=0;i<len;i++)d[i]=Math.random()*2-1;
+ [700,1200,1900].forEach(function(fq,k){
+  var s=ctx.createBufferSource();s.buffer=buf;
+  var bp=ctx.createBiquadFilter();bp.type="bandpass";bp.frequency.value=fq;bp.Q.value=1.1;
+  var g=ctx.createGain();g.gain.setValueAtTime(0,cs);
+  g.gain.linearRampToValueAtTime(0.28,cs+0.35);
+  for(var j=0;j<14;j++){g.gain.linearRampToValueAtTime(0.12+Math.random()*0.2,cs+0.4+j*0.14)}
+  g.gain.linearRampToValueAtTime(0,cs+dur);
+  s.connect(bp);bp.connect(g);g.connect(out);s.start(cs);
+ });
+ for(var c=0;c<26;c++){
+  var s2=ctx.createBufferSource();s2.buffer=buf;
+  var hp=ctx.createBiquadFilter();hp.type="highpass";hp.frequency.value=2500;
+  var g2=ctx.createGain(),tt=cs+0.6+Math.random()*1.8;
+  g2.gain.setValueAtTime(0.25,tt);g2.gain.exponentialRampToValueAtTime(0.001,tt+0.06);
+  s2.connect(hp);hp.connect(g2);g2.connect(out);s2.start(tt,Math.random(),0.07);
+ }
+ setTimeout(function(){ctx.close()},5000);
+}
+
+/* Confetti */
+var cv=$("fx"),cx=cv.getContext("2d"),parts=[],raf;
+function confetti(){
+ if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+ cv.width=innerWidth;cv.height=innerHeight;
+ var cols=["#c9a557","#e6c77a","#1f4d34","#2e7a4f","#8a6a2f","#f3e6c0"];
+ parts=[];for(var i=0;i<220;i++)parts.push({x:Math.random()*cv.width,y:-Math.random()*cv.height*0.6,w:6+Math.random()*7,h:10+Math.random()*8,vy:2+Math.random()*4,vx:-1.5+Math.random()*3,r:Math.random()*6,vr:-.2+Math.random()*.4,c:cols[i%cols.length]});
+ var start=performance.now();cancelAnimationFrame(raf);
+ (function loop(now){
+  cx.clearRect(0,0,cv.width,cv.height);var alive=false;
+  parts.forEach(function(p){p.x+=p.vx+Math.sin(p.y/40);p.y+=p.vy;p.r+=p.vr;if(p.y<cv.height+20)alive=true;
+   cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillStyle=p.c;cx.fillRect(-p.w/2,-p.h/2,p.w,p.h);cx.restore()});
+  if(alive&&now-start<7000)raf=requestAnimationFrame(loop);else cx.clearRect(0,0,cv.width,cv.height);
+ })(start);
+}
+
+$("f").addEventListener("submit",function(e){
+ e.preventDefault();
+ $("cName").textContent=$("name").value.trim();
+ $("cIc").textContent=$("ic").value.trim();$("cId").textContent="ID VERIFIKASI: MMSP-BRITISH-"+new Date().getFullYear()+"-"+String(1000+Math.floor(Math.random()*9000));
+ $("cDate").textContent=fmt($("date").value);
+ $("empty").style.display="none";$("wrap").style.display="block";$("dl").hidden=false;
+ fit();$("msg").textContent="Tahniah! Sijil anda telah siap.";
+ $("wrap").scrollIntoView({behavior:"smooth",block:"start"});
+ try{playCelebration()}catch(err){}
+ confetti();
+});
+
+$("dl").addEventListener("click",function(){
+ $("msg").textContent="Menyediakan fail PNG…";
+ var fonts=document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve();
+ fonts.then(function(){
+  return html2canvas($("cert"),{scale:2.5,backgroundColor:null,useCORS:true,onclone:function(doc){doc.getElementById("cert").style.transform="none"}});
+ }).then(function(canvas){
+  return new Promise(function(res){canvas.toBlob(res,"image/png")});
+ }).then(async function(blob){
+  var fname="sijil-"+($("name").value.trim().replace(/\s+/g,"-").toLowerCase()||"penghargaan")+".png";
+  var dls=null;try{dls=await claude.use("downloads")}catch(x){}
+  if(dls){
+   try{await dls.save({filename:fname,data:new Uint8Array(await blob.arrayBuffer())});$("msg").textContent="Sijil sedia disimpan.";}
+   catch(err){$("msg").textContent=(err&&err.code==="declined")?"Muat turun dibatalkan.":"Muat turun tidak dapat dilakukan di sini."}
+  }else{
+   var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=fname;document.body.appendChild(a);a.click();a.remove();
+   $("msg").textContent="Sijil dimuat turun.";
+  }
+ }).catch(function(){$("msg").textContent="Gagal menjana PNG. Sila cuba lagi."});
+});
+</script>
+</body>
+</html>
